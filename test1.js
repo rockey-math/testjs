@@ -37,6 +37,18 @@ function connect() {
 		context.stroke();
 };
 
+function drawShape() {
+		values[valuePointer++ & 255] = y;
+		context.beginPath();
+		context.strokeStyle = "rgba(0,255,0,1)";
+		// context.moveTo(256 + 0.5, y + 0.5);
+		// for (var i = 1; i < 256; ++i) {
+		//		context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
+		// }
+	        context.lineTo(x + 0.5, values[(valuePointer - i) & 255] + 0.5);
+		context.stroke();
+}
+
 function drawWave() {
 		values[valuePointer++ & 255] = y;
 		context.beginPath();
@@ -66,6 +78,7 @@ function drawWave() {
 						break;
 		}
 		connect();
+	        drawShape();
 		drawWave();
 		var now = new Date().getTime();
 		time += (now - startTime) * Math.pow(10.0, frequencyInput.value);
