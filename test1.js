@@ -43,7 +43,7 @@ function drawShape() {
 		context.strokeStyle = "rgba(0,0,255,1)";
 		// context.moveTo(256 + 0.5, y + 0.5);
 		for (var i = 1; i < 256; ++i) {
-			context.lineTo(i + 0.5, values[(valuePointer - i) & 255] + 0.5);
+			context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
 		}
 	      
 		context.stroke();
@@ -79,7 +79,7 @@ function drawWave() {
 		}
 		connect();
 	        drawShape();
-		drawWave();
+		// drawWave();
 		var now = new Date().getTime();
 		time += (now - startTime) * Math.pow(10.0, frequencyInput.value);
 		startTime = now;
