@@ -8,8 +8,10 @@ var TAU = Math.PI * 2.0;
 var Scale = 64.0;
 var time = 0.0;
 var startTime = new Date().getTime();
-var values = [];
-var valuePointer = 0;
+var xvalues = [];
+var xvaluePointer = 0;
+var yvalues = [];
+var yvaluePointer = 0;
 var x = 128.0,
 		y = 128.0;
 
@@ -39,20 +41,14 @@ function connect() {
 };
 
 function drawShape() {
-		values[valuePointer++ & 255] = y;
-	        // values[valuePointer++ & 254] = x;
+		xvalues[xvaluePointer++ & 255] = x;
+	        yvalues[yvaluePointer++ & 255] = y;
 		context.beginPath();
 		context.strokeStyle = "rgba(0,0,255,1)";
-		context.moveTo( 0.5, y + 0.5);
-	        // context.lineTo(x+0.1, y+0.1);
+		context.moveTo(256 + 0.5, y + 0.5);        
 		for (var i = 1; i < 256; ++i) {
-		 // context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
-		    context.lineTo( i + 0.5, values[(valuePointer - i) & 255] + 0.5);
-		    context.stroke();	
-		    context.moveTo( i + 1.0 + 0.5, values[valuePointer-- & 255] + 0.5)	
-		    	
+		     context.lineTo(xvalues[(xvaluePointer - i) & 255] + 0.5, yvalues[(yvaluePointer - i) & 255] + 0.5);			    	
 		}
-	        context.lineTo(x+0.1, y+0.1);
 		context.stroke();
 }
 
@@ -85,7 +81,7 @@ function drawWave() {
 						break;
 		}
 		connect();
-	        // drawShape();
+	        drawShape();
 		drawWave();
 		var now = new Date().getTime();
 		time += (now - startTime) * Math.pow(10.0, frequencyInput.value);
