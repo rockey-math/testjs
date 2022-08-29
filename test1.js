@@ -15,6 +15,8 @@ var yvaluePointer = 0;
 var x = 128.0,
 		y = 128.0;
 
+// https://commons.wikimedia.org/wiki/File:Fourier_series_square_wave_circles_animation.gif
+
 function fourier(order) {
 		var phase = order * time * TAU;
 		var radius = 4.0 / (order * Math.PI) * Scale;
