@@ -21,12 +21,13 @@ function fourier(order) {
 		context.strokeStyle = "rgba(255,128,32,1.0)";
 		context.arc(x, y, radius, 0, TAU);
 		context.stroke();
+	
 		context.strokeStyle = "rgba(255,255,255,0.4)";
 		context.moveTo(x, y);
 		x += Math.cos(phase) * radius;
 		y += Math.sin(phase) * radius;
 		context.lineTo(x, y);
-		// context.stroke();
+		context.stroke();
 };
 
 function connect() {
@@ -39,10 +40,11 @@ function connect() {
 
 function drawShape() {
 		values[valuePointer++ & 255] = y;
+	        values[valuePointer++ & 255] = x;
 		context.beginPath();
 		context.strokeStyle = "rgba(0,0,255,1)";
-		context.moveTo(0.0, 0.0);
-	        context.lineTo(200.0, 200.0);
+		context.moveTo(x, y);
+	        context.lineTo(x+0.1, y+0.1);
 		// for (var i = 1; i < 256; ++i) {
 		// 	context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
 		// }
