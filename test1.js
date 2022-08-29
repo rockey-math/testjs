@@ -16,6 +16,7 @@ var x = 128.0,
 		y = 128.0;
 
 // https://commons.wikimedia.org/wiki/File:Fourier_series_square_wave_circles_animation.gif
+// https://htmlpreview.github.io/
 
 function fourier(order) {
 		var phase = order * time * TAU;
