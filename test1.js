@@ -47,9 +47,11 @@ function drawShape() {
 	        // context.lineTo(x+0.1, y+0.1);
 		for (var i = 1; i < 256; ++i) {
 		 // context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
-		    context.lineTo( i + 0.5, values[(valuePointer - i) & 255] + 0.5);	 
+		    context.lineTo( i + 0.5, values[(valuePointer - i) & 255] + 0.5);	
+		    context.moveTo( i + 1.0 + 0.5, values[(valuePointer i) & 255] + 0.5)	
+		    context.stroke();	
 		}
-		context.stroke();
+		// context.stroke();
 }
 
 function drawWave() {
