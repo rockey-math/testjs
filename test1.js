@@ -42,7 +42,7 @@ function drawShape() {
 		context.beginPath();
 		context.strokeStyle = "rgba(0,0,255,1)";
 		context.moveTo(0.0, 0.0);
-	        context.lineTo(10.0, y + 10.0);
+	        context.lineTo(x, y);
 		// for (var i = 1; i < 256; ++i) {
 		// 	context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
 		// }
