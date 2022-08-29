@@ -40,7 +40,7 @@ function connect() {
 
 function drawShape() {
 		values[valuePointer++ & 255] = y;
-	        values[valuePointer++ & 254] = x;
+	        // values[valuePointer++ & 254] = x;
 		context.beginPath();
 		context.strokeStyle = "rgba(0,0,255,1)";
 		context.moveTo( 0.5, y + 0.5);
