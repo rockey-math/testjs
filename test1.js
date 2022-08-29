@@ -58,7 +58,7 @@ function drawWave() {
 		context.beginPath();
 		context.strokeStyle = "rgba(0,255,0,1)";
 		context.moveTo(300 + 0.5, y + 0.5); //256 
-		for (var i = 1; i < 768; ++i) { // 256
+		for (var i = 1; i < 256; ++i) { // 256
 				context.lineTo(350 + i + 0.5, yvalues[(yvaluePointer - i) & 255] + 0.5); // 256 --> 350
 		}
 		context.stroke();
