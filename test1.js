@@ -49,7 +49,7 @@ function drawShape() {
 		 // context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
 		    context.lineTo( i + 0.5, values[(valuePointer - i) & 255] + 0.5);
 		    context.stroke();	
-		    context.moveTo( i + 1.0 + 0.5, values[(valuePointer ) & 255] + 0.5)	
+		    context.moveTo( i + 1.0 + 0.5, values[valuePointer++ & 255] + 0.5)	
 		    	
 		}
 		// context.stroke();
