@@ -26,7 +26,7 @@ function fourier(order) {
 		x += Math.cos(phase) * radius;
 		y += Math.sin(phase) * radius;
 		context.lineTo(x, y);
-		context.stroke();
+		// context.stroke();
 };
 
 function connect() {
