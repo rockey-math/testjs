@@ -84,9 +84,9 @@ function drawWave() {
 						}
 						break;
 		}
-		// connect();
-	        drawShape();
-		// drawWave();
+		connect();
+	        // drawShape();
+		drawWave();
 		var now = new Date().getTime();
 		time += (now - startTime) * Math.pow(10.0, frequencyInput.value);
 		startTime = now;
