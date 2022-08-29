@@ -43,7 +43,7 @@ function drawShape() {
 	        values[valuePointer++ & 254] = x;
 		context.beginPath();
 		context.strokeStyle = "rgba(0,0,255,1)";
-		context.moveTo(1.5, y);
+		context.moveTo( 0.5, y);
 	        // context.lineTo(x+0.1, y+0.1);
 		for (var i = 1; i < 256; ++i) {
 		 // context.lineTo(256 + i + 0.5, values[(valuePointer - i) & 255] + 0.5);
