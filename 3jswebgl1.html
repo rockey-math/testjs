@@ -24,7 +24,7 @@
 			{
 				"imports": {
 					"three": "https://threejs.org/examples/../build/three.module.js",
-					"three/addons/": "https://threejs.org/examples/./jsm/"
+					"three/addons/": "./jsm/"
 				}
 			}
 		</script>
@@ -33,7 +33,7 @@
 
 			import * as THREE from 'three';
 
-			import Stats from 'https://threejs.org/examples/three/addons/libs/stats.module.js';
+			import Stats from 'three/addons/libs/stats.module.js';
 
 			let SCREEN_WIDTH = window.innerWidth;
 			let SCREEN_HEIGHT = window.innerHeight;
