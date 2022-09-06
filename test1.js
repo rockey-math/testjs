@@ -43,7 +43,7 @@ function connect() {
 		context.stroke();
 };
 
-function drawShape() {
+function drawShape() { // added
 		xvalues[xvaluePointer++ & 255] = x;
 	        yvalues[yvaluePointer++ & 255] = y;
 		context.beginPath();
